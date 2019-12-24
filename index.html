@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel ="stylesheet" type="text/css" href="style/index.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+<body class="fdc">
+
+ <form ><!--creer un formulaire de saisie -->
+            
+
+   <fieldset class="coordonnees">
+        <legend>formulaire d'inscription</legend><br>
+
+              <p id="civilite"><label>Civilité : </label>
+               <input type="radio" name="civilite" value="Mme" />Mme
+               <input type="radio" name="civilite" value="M" />M
+              </p>
+          
+                    <div class="nom">
+                      <label for="name">Entrer votre nom : </label>
+                      <input type="text" name="name" id="name" required>
+                    </div><br>
+
+                    <div class="prenom">
+                      <label for="prenom">Entrer votre prenom: </label>
+                      <input type="text" name="prenom" id="prenom" required>
+                    </div><br>
+
+                    <div class="datedenaissance">
+                            <label for="date"> Votre date de naissance: </label>
+                            <input type="date" name="date de naissance" id="datedenaissance" >
+                          </div><br>
+
+                          <div class="email">
+                                <label for="email">Entrer votre Email: </label>
+                                <input type="email" name="email" id="email" required>
+                              </div><br>
+                              
+                         <div class="adressepostale">
+                             <label for="adressepostale">Entrer votre adresse: </label>
+                             <input type="text" name="adresse" id="adresse" >
+                         </div><br>
+                              
+                         <div class="offres">
+                                <input type="checkbox" id="commerciale" name="subscribe" value="offrescommerciale">
+                                 <label for="subscribeNews">Souhaitez-vous vous recevoir nos differentes offres commerciales ?</label>
+                              </div>
+         
+         
+                             <div class="newsletter">
+                               <input type="checkbox" id="subscribe" name="subscribe" value="newsletter">
+                                <label for="subscribeNews">Souhaitez-vous vous abonner à la newsletter ?</label>
+                              </div><br>
+
+                            
+
+
+                   
+                    
+  </form>
+    
+</body>
+</html>

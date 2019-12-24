@@ -1,0 +1,185 @@
+ <!DOCTYPE html>
+<html lang="fr">
+<head> 
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel ="stylesheet" type="text/css" href="style/index.css"/>
+    <script>
+        // Synthese vocale
+      var synth;
+      var utt;
+      var pitchValue = 1;
+      var rateValue = 1;
+      var currentVoiceLang = "fr-FR";
+      var currentPitchValue = 1;
+      var currentRateValue = 1;
+      var listePersonnes;
+      var nomPersonne;
+      var choixPersonne;
+
+      function initSynthese() {
+          try {
+              synth = window.speechSynthesis;
+              utt = new SpeechSynthesisUtterance();  
+          } catch (e) {
+              alert(e);
+          }
+      }
+      function parle(texte) {
+          try {
+              utt.pitch = currentPitchValue;
+              utt.rate = currentRateValue;
+              synth.getVoices().forEach(function (voice) {
+                  if (voice.lang === currentVoiceLang) {
+                      utt.voice = voice;
+                  }
+              });
+
+              initSynthese();
+              utt.text = texte;
+              synth.speak(utt);
+          } catch (e) {
+          }
+      }
+
+      function resumeInfinity() {
+          window.speechSynthesis.resume();
+          timeoutResumeInfinity = setTimeout(resumeInfinity, 1000);
+      }
+                      
+
+      function tralala()
+      {
+
+        initSynthese();
+        parle("Sallut et bienvenue à questions pour un champion okay i am groot .");
+        resumeInfinity();
+      }                      
+      
+    </script>
+    <title>Document</title>
+</head>
+<body onload="tralala()">
+
+    <div class="dauphin"><img src="images/LOGO.jpg" alt="logo"></img></div>
+  
+    <div id="header">
+				<header>
+            
+					<h1>Bienvenue sur le site de la boutique
+            <span class="logo">
+              VDQL
+          </span>
+        </h1>
+			    <h2>spécialiste  des équipements aquasportifs </h2>
+				</header>
+    </div><br>
+
+    <button class="btnnav" type="button"><a href="connect.html">s'identifier</a></button>
+    <button class="btnn" type="button"><a href="index.html">Ouvrir un compte</a></button>
+
+    <div id="contenair">
+       <ul>
+
+        <li><a href="formulaireN.html">Accueil</a></li>
+        
+        <li><a href="#">enfants</a>
+        
+           <ul>
+              <li><a href="#">maillot</a></li>
+              <li><a href="#">masques</a></li>
+              <li><a href="#">tubas</a></li>
+              <li><a href="#">autres equipements</a></li>
+             </ul> 
+        
+        </li>
+        
+        <li><a href="#">femmes</a>
+        
+           <ul>
+             <li><a href="#">maillot</a></li>            
+             <li><a href="#">masques</a></li>
+             <li><a href="#">tubas</a></li>
+             <li><a href="#">autres equipements</a></li>
+        
+           </ul> 
+        
+         </li>
+        
+      
+        
+         <li><a href="application.html">hommes</a>
+          <ul>
+             <li><a href="#">maillot</a></li>
+             <li><a href="#">masques</a></li>
+             <li><a href="#">tubas</a></li>
+             <li><a href="#">autres equipements</a></li>
+
+          </ul>
+      </li>
+         <li><a href="aide">Aide</a>
+        
+           <ul>
+        
+             <li><a href="aide/faq.html">FAQ</a></li>
+        
+             <li><a href="aide/index.html">Contact</a></li>
+        
+           </ul>
+        
+         </li>
+        
+        </ul>
+
+      </div>
+
+
+
+
+
+
+ 
+     <div class="slider">
+      <div class="slides">
+        <div class="slide"><img src="./images/maillot de bain famille.jpg" alt="masque"/></div>
+        <div class="slide"><img src="./images/img3m.jpg" alt="tubas"/></div>
+        <div class="slide"><img src="./images/troisMo.jpg" alt="bouteille"/></div>
+      </div>
+  </div>
+</main>
+		
+   
+     
+    
+
+        <!--
+         <div class="dejaClient">
+                <input type="button" onclick=window.location.href='connect.html' value="deja client ?" id="dejaC">
+
+              </div><br>
+
+              <div class="inscription"><br>
+                    <input type=button onclick=window.location.href='index.html'; value="inscription" id="inscrip">
+                  </div><br>
+                 -->            
+
+
+
+
+
+          
+      
+        
+
+  
+    <footer>
+      <p>Copyright Ahcene Sai - Tous droits réservés<br />
+      <a href="#">Me contacter !</a></p>
+    </footer>
+ 
+        
+</body>
+</html>
